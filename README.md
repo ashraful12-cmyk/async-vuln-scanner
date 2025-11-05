@@ -1,4 +1,29 @@
 # 🔍 Async Vulnerability Scanner (AVScan)
+<p align="center">
+  <img src="banner.png" width="600" alt="Async Vulnerability Scanner Banner">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-Python%203.12-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Async-Enabled-green?logo=fastapi" />
+  <img src="https://img.shields.io/badge/Security%20Tool-Cyber%20Scanner-orange?logo=shield" />
+  <img src="https://img.shields.io/github/stars/ashraful12-cmyk/async-vuln-scanner?style=social" />
+</p>
+
+---
+
+<p align="center">
+  ⚡ **Async Vulnerability Scanner (AVScan)** – A high-performance, non-destructive web vulnerability testing tool.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" />
+  <img src="https://img.shields.io/github/last-commit/ashraful12-cmyk/async-vuln-scanner" />
+  <img src="https://img.shields.io/badge/Made%20for-Bug%20Bounty%20Hunters-critical" />
+</p>
+
+---
+
 
 **Async-Vuln-Scanner** is a **real-time website vulnerability testing tool** built using Python `asyncio` and `aiohttp`.  
 It performs **non-destructive bug bounty–style testing**, finding **valid exposed keys, tokens, sensitive files, and misconfigurations** on live web targets.
