@@ -47,10 +47,14 @@ python -m playwright install
 
 ---
 
-## 🚀 Usage Guide
+---
 
-Once installed, you can start scanning any website easily.
+## 🚀 Quick Run / Usage
 
-### Run a website vulnerability test
+After installing (see Installation above), you can run the scanner with the console command `avscan`.
+
+### Basic example
 ```bash
+# scan a website (replace with the target you are authorized to test)
 avscan https://example.com
+
