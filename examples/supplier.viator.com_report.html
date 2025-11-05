@@ -1,0 +1,611 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scan Report - https://supplier.viator.com/</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; line-height: 1.4; padding: 18px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+    h2 { margin-top: 20px; }
+    .vuln { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 6px; }
+    .sev-critical { color: #b00; font-weight: bold; }
+    .sev-high { color: #c00; }
+    .sev-medium { color: #b60; }
+    .sev-low { color: #444; }
+    pre { background: #f9f9f9; padding: 8px; overflow: auto; }
+    code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Scan Report - https://supplier.viator.com/</h1>
+  <p>Generated: 2025-11-04T16:23:54.715968+00:00</p>
+
+  <h2>Ports</h2>
+  <table>
+    <tr><th>Port</th><th>Open?</th><th>Service</th><th>Banner</th></tr>
+    
+    <tr>
+      <td>80</td>
+      <td>open</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>443</td>
+      <td>open</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>8080</td>
+      <td>closed</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>8443</td>
+      <td>closed</td>
+      <td>-</td>
+      <td></td>
+    </tr>
+    
+  </table>
+
+  <h2>Web Findings</h2>
+  
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SEC-HSTS-01</div>
+        <div><strong>Title:</strong> Missing HSTS</div>
+        <div><strong>Severity:</strong> <span class="sev-low">low</span></div>
+        <p>Strict-Transport-Security header missing</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/</a>
+          </div>
+        
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SEC-FRAME-01</div>
+        <div><strong>Title:</strong> Framing allowed</div>
+        <div><strong>Severity:</strong> <span class="sev-low">low</span></div>
+        <p>No X-Frame-Options or CSP frame-ancestors</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/</a>
+          </div>
+        
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SEC-CTO-01</div>
+        <div><strong>Title:</strong> Missing X-Content-Type-Options</div>
+        <div><strong>Severity:</strong> <span class="sev-low">low</span></div>
+        <p>X-Content-Type-Options: nosniff header missing</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/</a>
+          </div>
+        
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SEC-CSP-01</div>
+        <div><strong>Title:</strong> Missing CSP</div>
+        <div><strong>Severity:</strong> <span class="sev-low">low</span></div>
+        <p>Content-Security-Policy header not present</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/</a>
+          </div>
+        
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SEC-COOKIE-01</div>
+        <div><strong>Title:</strong> Cookie flags not secure</div>
+        <div><strong>Severity:</strong> <span class="sev-medium">medium</span></div>
+        <p>Cookie missing flags: ['datadome=0bzuhjronuuxrczlzjtudhjp1yf~xg8leo_i61zc_0zsmhc4ay6s4~e1imyebvn7n~iupefbf6nwzpqkphmxtvlaal0c_pdslffd0s_vkoqaf56o1gmdp1yaxqio1olf', 'max-age=31536000', 'domain=.viator.com', 'path=/', 'secure', 'samesite=lax']</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>datadome=0bzuHJROnUuxRCzlzjtUDhJp1Yf~xG8lEo_I61ZC_0ZsmhC4aY6s4~E1IMYeBVN7N~iupEFBf6NWZpqKPHmxtvlAAl0C_pdSLFFd0s_VkOqAF56o1GmDp1YAXQIo1olf; Max-Age=31536000; Domain=.viator.com; Path=/; Secure; SameSite=Lax</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> WEB-XSS-01</div>
+        <div><strong>Title:</strong> Reflected input detected</div>
+        <div><strong>Severity:</strong> <span class="sev-high">high</span></div>
+        <p>Query parameter value was reflected in the response body.</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/?q=XSS_PROOF_12345" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/?q=XSS_PROOF_12345</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>Token echoed in response</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint admin returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/admin" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/admin</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint admin/login returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/admin/login" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/admin/login</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint api returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/api" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/api</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint api/v1 returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/api/v1" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/api/v1</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint dashboard returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/dashboard" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/dashboard</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint wp-admin returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/wp-admin" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/wp-admin</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint sitemap.xml returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/sitemap.xml" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/sitemap.xml</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint .well-known/security.txt returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/.well-known/security.txt" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/.well-known/security.txt</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint backend returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/backend" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/backend</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint login returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/login" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/login</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint manage returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/manage" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/manage</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint robots.txt returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/robots.txt" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/robots.txt</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-01</div>
+        <div><strong>Title:</strong> Public endpoint returned 200</div>
+        <div><strong>Severity:</strong> <span class="sev-high">high</span></div>
+        <p>Endpoint favicon.ico returned 200</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/favicon.ico" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/favicon.ico</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>    00     %  6            %       h  6  (   0   `           $                                                                                                      mk$mkmkmkmkmkmkmkt                                                                                                                                                                mkpmkmkmkmkmkmkmkmk           </pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint healthz returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/healthz" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/healthz</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> EXPOSE-ENDPOINT-02</div>
+        <div><strong>Title:</strong> Endpoint protected</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>Endpoint status returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/status" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/status</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>.env returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/.env" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/.env</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>config.php returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/config.php" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/config.php</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>wp-config.php returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/wp-config.php" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/wp-config.php</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>.git/config returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/.git/config" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/.git/config</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>.git/HEAD returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/.git/HEAD" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/.git/HEAD</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>package.json returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/package.json" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/package.json</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>composer.json returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/composer.json" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/composer.json</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>credentials.json returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/credentials.json" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/credentials.json</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>backup.zip returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/backup.zip" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/backup.zip</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>db.sql returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/db.sql" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/db.sql</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>config.yaml returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/config.yaml" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/config.yaml</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>config.yml returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/config.yml" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/config.yml</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>.htpasswd returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/.htpasswd" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/.htpasswd</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>id_rsa returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/id_rsa" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/id_rsa</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>id_rsa.pub returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/id_rsa.pub" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/id_rsa.pub</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+      <div class="vuln">
+        <div><strong>ID:</strong> SENS-FILE-02</div>
+        <div><strong>Title:</strong> Protected file</div>
+        <div><strong>Severity:</strong> <span class="sev-info">info</span></div>
+        <p>phpinfo.php returned 403</p>
+        
+          <div><strong>URL:</strong>
+            <a href="https://supplier.viator.com/phpinfo.php" target="_blank" rel="noopener noreferrer">https://supplier.viator.com/phpinfo.php</a>
+          </div>
+        
+        
+          <div><strong>Evidence:</strong><pre>status=403</pre></div>
+        
+      </div>
+    
+  
+</body>
+</html>
