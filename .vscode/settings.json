@@ -1,0 +1,4 @@
+{
+  "python.analysis.extraPaths": ["./scanner"],
+  "python.analysis.autoImportCompletions": true
+}

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "async-vuln-scanner"
+version = "0.1.0"
+description = "Async vulnerability scanner (authorized testing only)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Your Name"}]
+
+[project.scripts]
+avscan = "scanner.cli:main"
