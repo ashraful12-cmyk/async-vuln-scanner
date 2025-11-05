@@ -38,3 +38,13 @@ pip install -r requirements.txt
 
 # Optional: if your workflow needs Playwright rendering
 python -m playwright install
+
+---
+
+## 🚀 Quick Run / Usage
+
+After installing (see Installation above), you can run the scanner from the terminal using the command:
+
+```bash
+# Example: scan a target website (authorized testing only)
+avscan https://example.com
