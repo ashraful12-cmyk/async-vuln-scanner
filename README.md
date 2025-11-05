@@ -1,27 +1,40 @@
-# 🔍 Async Vulnerability Scanner
+# 🔍 Async Vulnerability Scanner (AVScan)
 
-A high-performance asynchronous vulnerability scanner built with Python and asyncio.
-
-## ✨ Features
-- ⚡ Asynchronous port scanning using `asyncio`
-- 🧠 Service fingerprinting and banner grabbing
-- 🕵️ CVE lookup using the NVD API
-- 📊 Generates structured JSON and HTML reports
-- 🧩 Modular design for easy expansion (e.g., HTTP, SSH, SMB scanning)
+**Async-Vuln-Scanner** is a **real-time website vulnerability testing tool** built using Python `asyncio` and `aiohttp`.  
+It performs **non-destructive bug bounty–style testing**, finding **valid exposed keys, tokens, sensitive files, and misconfigurations** on live web targets.
 
 ---
 
-## ⚙️ Installation
+## 🚀 Features
+
+- ⚡ **Asynchronous scanning** — high-speed, parallelized web checks  
+- 🧠 **Detects leaked keys & secrets** (AWS keys, API keys, tokens)  
+- 🕵️ **Checks for common issues:** CORS, open redirect, reflected XSS, missing security headers  
+- 🔎 **Sensitive file discovery:** `.env`, `wp-config.php`, `id_rsa`, etc.  
+- 📊 **Automatic reporting** — JSON, HTML, TXT, PDF saved automatically to Desktop → `AsyncScannerReports`  
+- 🧩 Modular architecture — easy to extend for additional checks  
+- ✅ Non-destructive and safe by default (do NOT run on targets you don't have permission to test)
+
+---
+
+## 🧰 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourname/async-vuln-scanner.git
+git clone https://github.com/ashraful12-cmyk/async-vuln-scanner.git
 cd async-vuln-scanner
 
 # Create and activate a virtual environment (recommended)
 python -m venv .venv
-source .venv/bin/activate   # on macOS/Linux
-.venv\Scripts\activate      # on Windows
+
+# On Windows:
+.venv\Scripts\activate
+
+# On Linux/macOS:
+source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Optional: if your workflow needs Playwright rendering
+python -m playwright install
